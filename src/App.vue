@@ -22,7 +22,8 @@
   <main>
     <!-- v-if directive -->
     <ul v-if="showList">
-      <li></li>
+      <!-- v-for directive -->
+      <li v-for="todo in todos">{{ todo }}</li>
     </ul>
   </main>
 </template>
