@@ -9,7 +9,13 @@
         type: Number,
         required: true,
       }
-    }
+    },
+    methods:{
+      markAsDone() {
+        this.$emit("mark-as-done", this.index);
+      }
+    },
+    emits: ["mark-as-done"],
   }
 </script>
 
@@ -20,7 +26,7 @@
         <i v-if="todo.done" class="check-icon"></i>
       </div>
       <p>{{ todo.description }}</p>
-      <button>Mark sa done</button>
+      <button v-if="!todo.done" @click="markAsDone">Mark sa done</button>
     </article>
 </template>
 

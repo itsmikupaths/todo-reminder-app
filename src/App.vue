@@ -26,6 +26,9 @@
       toggleTodos() {
         this.showList = !this.showList;
       },
+      updateDone(index) {
+        this.todos[index].done = true;
+      }
     }
   };
 </script>
@@ -37,7 +40,10 @@
   </header>
 
   <main>
-    <Todo v-for="(todo, index) in todos" :todo="todo" :index="index"></Todo>
+    <Todo v-for="(todo, index) in todos" :todo="todo"
+      :index="index"
+      :key="index"
+      @mark-as-done="updateDone"></Todo>
   </main>
 </template>
 
