@@ -3,6 +3,7 @@
     data: () => {
       return {
         title: "Todo Reminder",
+        count: 0,
         message: "Hello Vue App",
         logoPath: "./src/assets/images/todo-reminder-logo.png",
         showList: true,
@@ -20,7 +21,7 @@
 <template>
   <header>
     <img :src="logoPath" :alt="title">
-    <h2>{{ title }}</h2>
+    <h2>{{ title + `(${ count })` }}</h2>
   </header>
 
   <main>
