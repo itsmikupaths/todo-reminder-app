@@ -1,9 +1,11 @@
 <script>
   import Todo from './components/todo.vue';
+  import TodoForm from './components/todo-form.vue';
 
   export default {
     components: {
-      Todo
+      Todo,
+      TodoForm,
     },
     data: () => {
       return {
@@ -45,6 +47,8 @@
       :key="index"
       @mark-as-done="updateDone"></Todo>
   </main>
+
+  <TodoForm></TodoForm>
 </template>
 
 <style scoped>
