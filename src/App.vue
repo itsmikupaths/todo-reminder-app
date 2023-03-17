@@ -30,7 +30,7 @@
   </main>
 
   <!-- v-on: directive -->
-  <button v-on:click="toggleTodos">Toggle Todos</button>
+  <button @click="toggleTodos">Toggle Todos</button>
 </template>
 
 <style scoped>
