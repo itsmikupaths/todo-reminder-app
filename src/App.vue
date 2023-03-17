@@ -19,9 +19,18 @@
   </header>
 
   <main>
-    <ul>
+    <!-- v-if directive -->
+    <ul v-if="showList">
       <li>Meeting with John</li>
       <li>Create pull request for code review</li>
+      <li>yada yada</li>
+    </ul>
+    <ul v-else>
+      <li>another todo here</li>
+    </ul>
+    <!-- v-show directive -->
+    <ul v-show="showList">
+      <li>Meeting with Mike</li>
       <li>yada yada</li>
     </ul>
   </main>
