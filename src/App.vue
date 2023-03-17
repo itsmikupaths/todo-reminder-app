@@ -15,7 +15,7 @@
         todos: [
           { title: "Meeting with John", description: "To discuss the next step on the project.", done: true },
           { title: "Create pull request", description: "For code review and testing purposes.", done: false },
-          { title: "Early clock-out", description: "Personal errand.", done: false }
+          { title: "Early clock-out", description: "Personal errand.", done: false },
         ]
       }
     },
@@ -30,7 +30,10 @@
       },
       updateDone(index) {
         this.todos[index].done = true;
-      }
+      },
+      createReminder(data) {
+        this.todos.push(data);
+      },
     }
   };
 </script>
@@ -48,7 +51,7 @@
       @mark-as-done="updateDone"></Todo>
   </main>
 
-  <TodoForm></TodoForm>
+  <TodoForm @save-form-data="createReminder"></TodoForm>
 </template>
 
 <style scoped>

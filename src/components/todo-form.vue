@@ -1,13 +1,30 @@
 <script>
   export default {
+    emits: ["save-form-data"],
     data() {
       return {
         show: false,
+        formData: {
+          title: '',
+          description: '',
+          done: false,
+        }
       }
     },
     methods: {
       toggleForm() {
         this.show = !this.show;
+      },
+      saveForm() {
+        if(this.formData.title === "" || this.formData.description === "") return;
+
+        this.$emit("save-form-data", this.formData);
+        this.formData = {
+          title: '',
+          description: '',
+          done: false,
+        }
+        this.toggleForm();
       }
     }
   }
@@ -15,18 +32,20 @@
 
 <template>
   <div class="form-container">
-    <form v-show="show">
+    <form v-show="show" @submit.prevent >
       <span>Create Reminder</span>
       <div class="form-input">
         <label for="title">Title</label>
-        <input type="text" name="tile" />
+        <input type="text" name="tile" v-model="formData.title" />
       </div>
       <div class="form-input">
         <label for="description">Description</label>
-        <textarea name="description"></textarea>
+        <textarea name="description" v-model="formData.description"></textarea>
       </div>
       <div class="form-input form-group">
-        <input type="submit" value="Submit" />
+        <input type="submit"
+               value="Submit"
+               @click="saveForm" />
         <input type="button"
                value="Cancel"
                @click="toggleForm" />
