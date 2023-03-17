@@ -14,18 +14,17 @@
 
 <template>
   <header>
-    <!-- v-bind: directive -->
     <img :src="logoPath" :alt="title">
     <h2>{{ title }}</h2>
   </header>
 
   <main>
-    <!-- v-if directive -->
     <ul v-if="showList">
-      <!-- v-for directive -->
       <li v-for="todo in todos">{{ todo }}</li>
     </ul>
   </main>
+
+  <button>Toggle Todos</button>
 </template>
 
 <style scoped>
