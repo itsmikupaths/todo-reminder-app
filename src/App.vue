@@ -5,6 +5,7 @@
         title: "Todo Reminder",
         message: "Hello Vue App",
         logoPath: "./src/assets/images/todo-reminder-logo.png",
+        showList: true,
       }
     }
   };
@@ -18,7 +19,11 @@
   </header>
 
   <main>
-    {{ message }}
+    <ul>
+      <li>Meeting with John</li>
+      <li>Create pull request for code review</li>
+      <li>yada yada</li>
+    </ul>
   </main>
 </template>
 
@@ -34,5 +39,12 @@
   img {
     width: 44px;
     aspect-ratio: 1/1;
+  }
+  main {
+    margin-top: 10px;
+  }
+  ul {
+    list-style-type: none;
+    padding: 0;
   }
 </style>
