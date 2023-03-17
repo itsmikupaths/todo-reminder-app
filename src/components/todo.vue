@@ -20,6 +20,7 @@
         <i v-if="todo.done" class="check-icon"></i>
       </div>
       <p>{{ todo.description }}</p>
+      <button>Mark sa done</button>
     </article>
 </template>
 
@@ -54,5 +55,8 @@
     transform: translateY (50%);
     rotate: 45deg;
     transform-origin: left bottom;
+  }
+  button {
+    margin-top: 10px;
   }
 </style>
