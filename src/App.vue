@@ -8,6 +8,11 @@
         showList: true,
         todos: ["Code", "Eat", "Sleep", "Repeat"],
       }
+    },
+    methods: {
+      toggleTodos() {
+        this.showList = !this.showList;
+      },
     }
   };
 </script>
@@ -24,7 +29,8 @@
     </ul>
   </main>
 
-  <button>Toggle Todos</button>
+  <!-- v-on: directive -->
+  <button v-on:click="toggleTodos">Toggle Todos</button>
 </template>
 
 <style scoped>
