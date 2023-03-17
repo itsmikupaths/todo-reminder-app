@@ -4,7 +4,7 @@
       return {
         title: "Todo Reminder",
         message: "Hello Vue App",
-        logoPath: "./assets/images/todo-reminder-logo.png",
+        logoPath: "./src/assets/images/todo-reminder-logo.png",
       }
     }
   };
