@@ -4,7 +4,7 @@
       return {
         title: "Todo Reminder",
         message: "Hello Vue App",
-        logoPath: "./assets/images/todo-reminder-logo.png",
+        logoPath: "./src/assets/images/todo-reminder-logo.png",
       }
     }
   };
@@ -12,7 +12,8 @@
 
 <template>
   <header>
-    <img src="" alt="">
+    <!-- v-bind: directive -->
+    <img :src="logoPath" :alt="title">
     <h2>{{ title }}</h2>
   </header>
 
