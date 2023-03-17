@@ -1,1 +1,5 @@
 @import './base.css';
+
+.wrapper-container {
+  padding: 10px;
+}

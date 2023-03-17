@@ -3,7 +3,8 @@
     data: () => {
       return {
         title: "Todo Reminder",
-        message: "Hello Vue App"
+        message: "Hello Vue App",
+        logoPath: "./assets/images/todo-reminder-logo.png",
       }
     }
   };
@@ -11,9 +12,8 @@
 
 <template>
   <header>
-    <div class="wrapper">
-      <h2>{{ title }}</h2>
-    </div>
+    <img src="" alt="">
+    <h2>{{ title }}</h2>
   </header>
 
   <main>
@@ -22,5 +22,16 @@
 </template>
 
 <style scoped>
-
+  header {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    padding-bottom: 5px;
+    border-bottom: 2px solid grey;
+  }
+  img {
+    width: 44px;
+    aspect-ratio: 1/1;
+  }
 </style>
