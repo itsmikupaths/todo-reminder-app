@@ -25,9 +25,8 @@
       <li>Create pull request for code review</li>
       <li>yada yada</li>
     </ul>
-    <ul v-else>
-      <li>another todo here</li>
-    </ul>
+    <span v-else>No list here!</span>
+    
     <!-- v-show directive -->
     <ul v-show="showList">
       <li>Meeting with Mike</li>
